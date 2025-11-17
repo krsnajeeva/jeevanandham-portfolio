@@ -1,6 +1,8 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
 import { summary } from "../data/summary";
+import { contact } from "../data/contact"; // 👈 import contact details
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 export default function About() {
   return (
@@ -9,9 +11,11 @@ export default function About() {
       <h2 className="mb-4 text-xl font-extrabold bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">
         About Me
       </h2>
+
       <div className="rounded-2xl p-[1px] bg-gradient-to-tr from-purple-400 to-indigo-400 shadow-md">
         {/* Inner white card */}
         <div className="rounded-2xl bg-white p-5 h-full">
+          {/* ✅ Summary list */}
           <ul className="space-y-3 text-sm text-gray-700 text-justify">
             {summary.map((point, index) => (
               <Motion.li
@@ -19,7 +23,6 @@ export default function About() {
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05 }}
-                // viewport={{ once: true }}
                 viewport={{ once: false, amount: 0.2 }}
                 className="flex items-start gap-2"
               >
@@ -28,6 +31,34 @@ export default function About() {
               </Motion.li>
             ))}
           </ul>
+
+          {/* ✅ Contact Links - add here */}
+          {/* <div className="flex justify-center gap-6 mt-6">
+            <a
+              href={`mailto:${contact.email}`}
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-600 hover:text-indigo-600 transition"
+            >
+              <FiMail size={20} />
+            </a>
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-600 hover:text-indigo-600 transition"
+            >
+              <FiGithub size={20} />
+            </a>
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-600 hover:text-indigo-600 transition"
+            >
+              <FiLinkedin size={20} />
+            </a>
+          </div> */}
         </div>
       </div>
     </section>

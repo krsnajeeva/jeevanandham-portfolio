@@ -13,7 +13,8 @@ export default function Hero() {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-base font-extrabold leading-snug"
+            className="text-base font-extrabold leading-snug truncate max-w-full"
+            style={{ fontSize: "clamp(0.9rem, 4vw, 1rem)" }}
           >
             👋 Hi, I’m{" "}
             <span className="bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">

@@ -10,7 +10,7 @@ import {
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { contact } from "../data/contact";
 
-export default function Navbar() {
+export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
 
@@ -25,12 +25,26 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleNavigate = (e, id) => {
+    // allow mailto default
+    if (id === "mailto") return;
+    if (e && e.preventDefault) e.preventDefault();
+    setOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // fallback: anchor navigation (in case ids differ)
+      window.location.hash = `#${id}`;
+    }
+  };
+
   return (
     <Motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.45 }}
-      className="w-full bg-transparent p-3 max-w-lg mx-auto relative"
+      className="w-full bg-transparent p-3 relative"
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -67,8 +81,8 @@ export default function Navbar() {
                   <li>
                     <a
                       href="#projects"
+                      onClick={(e) => handleNavigate(e, "projects")}
                       className="flex items-center gap-3 px-4 py-2.5 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-500 hover:text-white"
-                      onClick={() => setOpen(false)}
                     >
                       <FiFolder className="text-indigo-500" /> Projects
                     </a>
@@ -76,8 +90,8 @@ export default function Navbar() {
                   <li>
                     <a
                       href="#experience"
+                      onClick={(e) => handleNavigate(e, "experience")}
                       className="flex items-center gap-3 px-4 py-2.5 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-500 hover:text-white"
-                      onClick={() => setOpen(false)}
                     >
                       <FiBriefcase className="text-purple-500" /> Experience
                     </a>
@@ -85,8 +99,8 @@ export default function Navbar() {
                   <li>
                     <a
                       href="#education"
+                      onClick={(e) => handleNavigate(e, "education")}
                       className="flex items-center gap-3 px-4 py-2.5 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-500 hover:text-white"
-                      onClick={() => setOpen(false)}
                     >
                       <FiBookOpen className="text-pink-500" /> Education
                     </a>
@@ -94,8 +108,8 @@ export default function Navbar() {
                   <li>
                     <a
                       href="#about"
+                      onClick={(e) => handleNavigate(e, "about")}
                       className="flex items-center gap-3 px-4 py-2.5 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-500 hover:text-white"
-                      onClick={() => setOpen(false)}
                     >
                       <FiUser className="text-blue-500" /> About Me
                     </a>
@@ -103,6 +117,7 @@ export default function Navbar() {
                   <li>
                     <a
                       href={`mailto:${contact.email}`}
+                      onClick={(e) => handleNavigate(e, "mailto")}
                       className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-500 hover:text-white"
                     >
                       <FiMail className="text-pink-500" /> Contact Me
