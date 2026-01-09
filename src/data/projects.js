@@ -1,6 +1,28 @@
 export const projects = [
   {
     id: 1,
+    title: "STARZPLAY TV Web Application",
+    description:
+      "Developed a multi-platform Smart TV streaming application for WebOS (LG TV), Tizen(Samsung TV), VIDAA(Hisense TV), Xbox, and PlayStation(PS4,PS5) with custom LRUD (Left-Right-Up-Down) spatial navigation for TV remote controls. Implemented video streaming with Bitmovin Player, internationalization with RTL support, dynamic theming, platform-specific builds, and legacy browser compatibility (2017+). Built with React 19, TypeScript, Redux Toolkit for state management, and Vite for optimized builds, featuring comprehensive testing with Vitest and CI/CD integration.",
+    tags: [
+      "React 19",
+      "TypeScript",
+      "Redux Toolkit",
+      "Styled-components",
+      "Vite",
+      "Vitest",
+      "CI/CD",
+      "Jest",
+      "React Router",
+      "React Hook Form",
+      "Redux",
+      "Bitmovin Player",
+      "RTL",
+    ],
+    year: "Oct 2025 – Present",
+  },
+  {
+    id: 2,
     title: "StarHub TV+ (OTT/Entertainment)",
     description:
       "Developed and maintained StarHub TV+ Android applications and custom launcher for Innopia and Sagemcom STBs. Implemented optimized UI/UX for Android TV, remote navigation, firmware-level interactions, and seamless playback integration.",
@@ -16,7 +38,7 @@ export const projects = [
     year: "Aug 2024 – Present",
   },
   {
-    id: 2,
+    id: 3,
     title: "R1 & R2 Dealer App (Telecom)",
     description:
       "Cross-platform dealer application for du Telecom with SIM/data/device purchase flows, customer dashboard, and real-time balance tracking.",
@@ -24,7 +46,7 @@ export const projects = [
     year: "Oct 2023 – Jul 2024",
   },
   {
-    id: 3,
+    id: 4,
     title: "Symbio® Service & Installation (HVAC)",
     description:
       "BLE-based mobile app for Trane Symbio 700 controller. Developed firmware update, backup, and installation workflow with Bluetooth connectivity.",
@@ -32,7 +54,7 @@ export const projects = [
     year: "Jan 2023 – Jun 2023",
   },
   {
-    id: 4,
+    id: 5,
     title: "Trane BAS Operator (Building Automation)",
     description:
       "Mobile app for managing Trane building automation systems. Implemented alarm management, system views, and animated status displays.",
@@ -40,7 +62,7 @@ export const projects = [
     year: "Jan 2023 – Jun 2023",
   },
   {
-    id: 5,
+    id: 6,
     title: "Trane BAS Occupant (Building Automation)",
     description:
       "App for building occupants to adjust schedules, temperature, and respond to alerts in real time.",
@@ -48,7 +70,7 @@ export const projects = [
     year: "Jan 2023 – Jun 2023",
   },
   {
-    id: 6,
+    id: 7,
     title: "OneCare Mobile (Healthcare)",
     description:
       "Cross-platform EMR app with RPM, appointments, and patient history modules.",
@@ -56,7 +78,7 @@ export const projects = [
     year: "Jun 2021 – Dec 2022",
   },
   {
-    id: 7,
+    id: 8,
     title: "OneCare EMR – Web (Healthcare)",
     description:
       "Web-based EMR solution with responsive design, appointment booking, and patient data management.",
@@ -64,7 +86,7 @@ export const projects = [
     year: "Jul 2021 – Dec 2022",
   },
   {
-    id: 8,
+    id: 9,
     title: "Solarworld BDE Installer (Renewable Energy)",
     description:
       "Installer app for meter configuration and solar energy tracking.",
@@ -72,7 +94,7 @@ export const projects = [
     year: "Apr 2021 – May 2021",
   },
   {
-    id: 9,
+    id: 10,
     title: "Solarworld BDE User (Renewable Energy)",
     description:
       "User app for solar panel current tracking, energy usage visualization, and grid interactions.",
@@ -80,7 +102,7 @@ export const projects = [
     year: "Mar 2021",
   },
   {
-    id: 10,
+    id: 11,
     title: "Navus Health Care – Web (Healthcare)",
     description:
       "Online test booking web app with AWS Cognito authentication and appointment workflows.",
@@ -88,7 +110,7 @@ export const projects = [
     year: "Jan 2021 – Feb 2021",
   },
   {
-    id: 11,
+    id: 12,
     title: "Navus Health Care – Mobile (Healthcare)",
     description:
       "Mobile app for online test booking with appointment scheduling, virtual and home testing flows.",
@@ -96,7 +118,7 @@ export const projects = [
     year: "Jun 2020 – Dec 2020",
   },
   {
-    id: 12,
+    id: 13,
     title: "D-KART (Logistics)",
     description:
       "Courier and logistics app integrated with Dreamsouq e-commerce platform.",
@@ -104,7 +126,7 @@ export const projects = [
     year: "May 2020 – Jun 2020",
   },
   {
-    id: 13,
+    id: 14,
     title: "Dreamsouq (E-commerce)",
     description:
       "Profit-sharing social e-commerce platform with rewards and referrals.",
@@ -112,7 +134,7 @@ export const projects = [
     year: "Apr 2020 – May 2020",
   },
   {
-    id: 14,
+    id: 15,
     title: "CPR Unload (Logistics)",
     description:
       "Mobile app for vehicle unloading process with Redux-based state management.",
@@ -120,7 +142,7 @@ export const projects = [
     year: "May 2020",
   },
   {
-    id: 15,
+    id: 16,
     title: "Ramanicars – iOS (Automotive)",
     description:
       "Sales-consultant app for scheduling test drives, uploading documents, and notifying customers.",
@@ -128,7 +150,7 @@ export const projects = [
     year: "Jan 2020 – Mar 2020",
   },
   {
-    id: 16,
+    id: 17,
     title: "Ramanicars – Android (Automotive)",
     description:
       "Native Android app for test drive scheduling, customer notifications, and SQLite-based local storage.",
